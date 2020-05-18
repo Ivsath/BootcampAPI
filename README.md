@@ -1,4 +1,4 @@
-# Express API template
+# Express Bootcamp API
 
 - [Resources](#resources)
 
