@@ -1,7 +1,5 @@
 import express from "express";
-
 import bootcamps from "./routes/bootcamps";
-
 import config from "./config";
 
 export const app = express();
