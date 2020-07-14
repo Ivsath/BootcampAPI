@@ -1,8 +1,11 @@
 import express from "express";
+import morgan from "morgan";
 import bootcamps from "./routes/bootcamps";
 import config from "./config";
 
 export const app = express();
+
+app.use(morgan("dev"));
 
 app.use("/api/v1/bootcamps", bootcamps);
 
