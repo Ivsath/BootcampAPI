@@ -8,7 +8,7 @@ import connect from "./utils/db";
 
 export const app = express();
 
-if (process.env.NODE_ENV === "development") {
+if (config.isDev) {
   app.use(morgan("dev"));
 }
 
