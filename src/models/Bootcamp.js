@@ -97,4 +97,4 @@ const bootcampSchema = new mongoose.Schema({
   },
 });
 
-export const Bootcamp = mongoose.model("Bootcamp", bootcampSchema);
+export default mongoose.model("Bootcamp", bootcampSchema);
