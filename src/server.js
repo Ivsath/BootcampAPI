@@ -3,6 +3,7 @@ import cors from "cors";
 import morgan from "morgan";
 
 import bootcamps from "./routes/bootcamps";
+import errorHandler from "./middleware/error";
 
 import config from "./config";
 import connect from "./utils/db";
@@ -19,6 +20,7 @@ if (config.isDev) {
 }
 
 app.use("/api/v1/bootcamps", bootcamps);
+app.use(errorHandler);
 
 export const start = async () => {
   try {
