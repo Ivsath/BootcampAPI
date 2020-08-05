@@ -4,11 +4,13 @@
   "description": "Bootcamp backend API",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec yarn restart",
     "restart": "rimraf dist && yarn build && yarn start",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "importData": "rimraf dist && yarn build && node dist/seeder.js -i",
+    "deleteData": "rimraf dist && yarn build && node dist/seeder.js -d"
   },
   "author": "Ivsath",
   "license": "ISC",
